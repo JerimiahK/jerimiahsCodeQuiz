@@ -7,3 +7,8 @@
 
 
 ## JavaScript 
+var object for questions
+var for time
+variables that link the corresponding HTML classes into JavaScript
+
+create listen event for "start quiz" button so welcome screen disappears when the button is pressed.

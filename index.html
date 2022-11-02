@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Code Quiz</title>
+    <title>JavaScript Drum Quiz</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2 class="over">GAME OVER</h2>
     <div class="timebox"></div>
+    <div class="container">
+        <div class="welcome" id="welcome">
+        <h1>Welcome to the Drum Quiz!</h1>
+        <p>You will be asked a series of questions that test your knowledge of drum related topics! These topics range from who drummers of bands were, to what companies make specific lines of gear. Click the button below to get started!</p>
+        <button class="big-button" id="start-button">START QUIZ!</button>
+        </div>
+        <div class="question-container hide" id="question-container">
+            <div id="question" class="question">Question:</div>
+            <div id="answer-buttons" class="answer-buttons">
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+            </div>
+        </div>
+        <div class="next-button">
+            <button class="big-button hide" id="next-button">NEXT</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

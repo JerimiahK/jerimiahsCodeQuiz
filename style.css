@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,28 +6,100 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(54, 68, 80);
 }
 
+.container {
+    width: 900px;
+    max-width: 80%;
+    background-color: rgb(2, 5, 7);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px white;
+}
+
+/* Timer */
 .timebox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
     background: rgb(36, 215, 227);
+    color: white;
     height: 50px;
     width: 150px;
+    max-width: 10%;
     position: absolute;
     top: 0;
     right: 0;
-   font-weight: bolder;
+    font-weight: bolder;
     text-align: center;
     padding-top: 15px;
-    font-size: 20px;
+    font-size: 100%
 }
 
-.over {
+/* Start "welcome" screen */
+.welcome {
+    line-height: 2;
+    color: azure;
+}
+
+.welcome h1 {
+    font-size: 300%;
+}
+
+.welcome p {
+    font-size: 150%;
+}
+
+.big-button {
+    margin: 35px;
+    height: 80px;
+    width: 20%;
+    font-size: 110%;
+    box-shadow: 5px 5px 15px rgb(245, 24, 179);
+    background-image: linear-gradient(to top, rgb(102, 178, 237), rgb(155, 97, 235));
+}
+/* End "welcome" screen */
+
+.question {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: azure;
+    font-size: 200%;
+}
+
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.button {
+    color: azure;
+    font-size: 180%;
+    margin: 12px;
+    height: 50px;
+    width: 55%;
+    box-shadow: 5px 5px 15px rgb(245, 24, 179);
+    background-image: linear-gradient(to top, rgb(102, 178, 237), rgb(155, 97, 235));
+}
+
+.big-button:hover {
+    border-color: white;
+}
+
+.button:hover {
+    border-color: white;
+}
+
+.hide {
     display: none;
-    border: 3px solid black;
-    font-size: 400%;
-    text-align: center;
-    position: relative;
-    color: rgb(160, 70, 70);
-    text-decoration: underline;
 }
