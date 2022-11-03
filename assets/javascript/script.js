@@ -103,7 +103,8 @@ const timeBox = document.querySelector(".timebox");
 const scoreBox = document.querySelector(".score-box");
 const finalScore = document.querySelector("#final-score");
 var userScore = 0;
-var secondsLeft = 120;
+var secondsLeft = 10;
+var userScoreData = localStorage.getItem("score");
 let randomQuestion, randomQuestionIndex;
 
 //~~~~~~~~~~~~EVENT LISTENERS FOR BUTTONS~~~~~~~~~~~~~~~~~
@@ -221,4 +222,9 @@ function highScore() {
   userScores.textContent =
     "Name: " + userName + " " + "|" + " " + "Highscore:" + " " + userScore;
   highScoresPage.append(userScores);
+  const userInfo = {
+    name: userName,
+    score: userScore,
+  };
+  localStorage.setItem("score", JSON.stringify(userInfo));
 }
