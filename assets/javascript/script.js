@@ -127,7 +127,7 @@ const questions = [
   },
   {
     question:
-      "What was the name of Phil Collins song with the famous drum roll?",
+      "What was the name of Phil Collins song with the famous drum fill?",
     answers: [
       { text: "You'll Be in My Heart", correct: false },
       { text: "Dont Stop Believin", correct: false },
@@ -203,11 +203,6 @@ function showQuestion(question) {
   });
 }
 
-// resets the question container so the 'Next' button is hidden and removes the original buttons with the removeChild method.
-function resetState() {
-  nextBtn.classList.add("hide");
-}
-
 // initiates the 'Next' button, or decrements the time by 7 seconds.
 function selectAnswer(event) {
   const pressedButton = event.target;
@@ -227,6 +222,11 @@ function selectAnswer(event) {
     timeBox.textContent = "GAME OVER";
     gameOver();
   }
+}
+
+// resets the question container so the 'Next' button is hidden and removes the original buttons with the removeChild method.
+function resetState() {
+  nextBtn.classList.add("hide");
 }
 
 // controls displaying and updating the score.
