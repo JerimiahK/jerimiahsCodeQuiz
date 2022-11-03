@@ -150,6 +150,7 @@ const scoreBox = document.querySelector(".score-box");
 const finalScore = document.querySelector("#final-score");
 var userScore = 0;
 var secondsLeft = 65;
+var incorrectMessage = 2;
 var userScoreData = localStorage.getItem("score");
 let randomQuestion, randomQuestionIndex;
 
@@ -211,11 +212,18 @@ function selectAnswer(event) {
     userScore++;
     score();
     nextBtn.classList.remove("hide");
-    const displayCorrect = document.createElement("h3");
-    displayCorrect.textContent = "You are Correct!";
+    const displayCorrect = document.createElement("h4");
+    displayCorrect.textContent = "You Are Correct, You Scored A Point!";
     displayCorrect.classList.add("question");
     questionContainer.appendChild(displayCorrect);
   } else if (secondsLeft > 7) {
+    const displayIncorrect = document.createElement("h4");
+    displayIncorrect.textContent = "Incorrect, -7 Seconds!";
+    displayIncorrect.classList.add("question");
+    questionContainer.appendChild(displayIncorrect);
+    setTimeout(() => {
+      displayIncorrect.remove();
+    }, 1400);
     secondsLeft -= 7;
   } else {
     secondsLeft -= 7;
