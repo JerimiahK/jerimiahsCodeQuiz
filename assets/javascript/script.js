@@ -89,6 +89,52 @@ const questions = [
       { text: "10 inches", correct: false },
     ],
   },
+  {
+    question: "Who is the drummer for Periphery?",
+    answers: [
+      { text: "Joey Jordison", correct: false },
+      { text: "Mike Malyan", correct: false },
+      { text: "Matt Halpern", correct: true },
+      { text: "Jay Postones", correct: false },
+    ],
+  },
+  {
+    question: "What drum companies vintage kits featured a round badge??",
+    answers: [
+      { text: "Ludwig", correct: false },
+      { text: "Rogers", correct: false },
+      { text: "Yamaha", correct: false },
+      { text: "Gretsch", correct: true },
+    ],
+  },
+  {
+    question: "What band features a drummer with only one arm?",
+    answers: [
+      { text: "Metallica", correct: false },
+      { text: "Def Leppard", correct: true },
+      { text: "Motley Crue", correct: false },
+      { text: "Bon Jovi", correct: false },
+    ],
+  },
+  {
+    question: "What band is Travis Barker in?",
+    answers: [
+      { text: "Falling in Reverse", correct: false },
+      { text: "My Chemical Romance", correct: false },
+      { text: "Fall Out Boy", correct: false },
+      { text: "Blink-182", correct: true },
+    ],
+  },
+  {
+    question:
+      "What was the name of Phil Collins song with the famous drum roll?",
+    answers: [
+      { text: "You'll Be in My Heart", correct: false },
+      { text: "Dont Stop Believin", correct: false },
+      { text: "Sweet Caroline", correct: false },
+      { text: "In The Air Tonight", correct: true },
+    ],
+  },
 ];
 const welcome = document.querySelector("#welcome");
 const startBtn = document.querySelector("#start-button");
@@ -103,7 +149,7 @@ const timeBox = document.querySelector(".timebox");
 const scoreBox = document.querySelector(".score-box");
 const finalScore = document.querySelector("#final-score");
 var userScore = 0;
-var secondsLeft = 10;
+var secondsLeft = 65;
 var userScoreData = localStorage.getItem("score");
 let randomQuestion, randomQuestionIndex;
 
