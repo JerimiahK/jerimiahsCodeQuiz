@@ -11,24 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Creates the timers container -->
     <div class="timebox"></div>
+    <!-- Creates the score box -->
+    <div class="score-box">
+
+    </div>
+    <!-- Container for all of welcome screen, questions, name input screen, high score screen, and next button. -->
     <div class="container">
+        <!-- Welcome screen contents -->
         <div class="welcome" id="welcome">
         <h1>Welcome to the Drum Quiz!</h1>
         <p>You will be asked a series of questions that test your knowledge of drum related topics! These topics range from who drummers of bands were, to what companies make specific lines of gear. Click the button below to get started!</p>
         <button class="big-button" id="start-button">START QUIZ!</button>
         </div>
+        <!-- Question contents -->
         <div class="question-container hide" id="question-container">
             <div id="question" class="question">Question:</div>
             <div id="answer-buttons" class="answer-buttons">
-                <button class="button"></button>
-                <button class="button"></button>
-                <button class="button"></button>
-                <button class="button"></button>
             </div>
         </div>
+        <!-- Next Button -->
         <div class="next-button">
             <button class="big-button hide" id="next-button">NEXT</button>
+        </div>
+        <!-- Time up/Enter name contents -->
+        <div id="game-over" class="question-container hide">
+            <h2 class="question">YOUR TIME IS UP!</h2>
+            <p class="question">Please input your name below to save your high score!</p>
+            <p class="question">Your Final Score Is: <span id="final-score"></span></p>
+            <input type="text" class="input" id="input" placeholder="Enter Name Here">
+            <button class="submit-button" id="submit-button">SUBMIT</button>
+        </div>
+        <!-- Contains the High Score contents -->
+        <div class="container welcome hide" id="high-scores">
+            <h1>See High Scores Below!</h1>
         </div>
     </div>
     <script src="./script.js"></script>

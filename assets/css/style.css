@@ -18,20 +18,20 @@ body {
 
 .container {
     width: 900px;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(2, 5, 7);
     border-radius: 50px;
     text-align: center;
     box-shadow: 0 0 10px white;
 }
 
-/* Timer */
+/* Timer and Score box */
 .timebox {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     background: rgb(36, 215, 227);
-    color: white;
+    color: black;
     height: 50px;
     width: 150px;
     max-width: 10%;
@@ -41,7 +41,25 @@ body {
     font-weight: bolder;
     text-align: center;
     padding-top: 15px;
-    font-size: 100%
+    font-size: 130%
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    background: rgb(36, 215, 227);
+    color: black;
+    height: 50px;
+    width: 150px;
+    max-width: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 180%
 }
 
 /* Start "welcome" screen */
@@ -92,6 +110,16 @@ body {
     background-image: linear-gradient(to top, rgb(102, 178, 237), rgb(155, 97, 235));
 }
 
+.submit-button {
+    color: azure;
+    font-size: 180%;
+    margin: 12px;
+    height: 50px;
+    width: 15%;
+    box-shadow: 5px 5px 15px rgb(245, 24, 179);
+    background-image: linear-gradient(to top, rgb(102, 178, 237), rgb(155, 97, 235));
+}
+
 .big-button:hover {
     border-color: white;
 }
@@ -100,6 +128,35 @@ body {
     border-color: white;
 }
 
+.submit-button:hover {
+    border-color: white;
+}
+
 .hide {
     display: none;
+}
+
+.input {
+    height: 50px;
+    width: 30%;
+    margin: 50px;
+}
+
+.li {
+    color: rgb(217, 64, 64);
+    font-size: 300%;
+}
+
+@media screen and (max-width: 1000px) {
+    .timebox, .score-box {
+        max-width: 20%;
+        height: 3%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .score-box {
+        max-width: 20%;
+        height: 5%;
+    }
 }
