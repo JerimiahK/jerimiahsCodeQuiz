@@ -11,4 +11,4 @@ To use this web application, you can follow the link provided below. The game is
 To explore this web page, please follow this link:
 https://jerimiahk.github.io/jerimiahsCodeQuiz/
 A screenshot of the application in action:
-![An image of jerimiahsCodeQuiz application being run in the browser.](assets/images/Screen%20Shot%202022-11-03%20at%204.21.49%20PM.png)
+![An image of jerimiahsCodeQuiz application being run in the browser.](Images/images/Screen%20Shot%202022-11-03%20at%204.21.49%20PM.png)
